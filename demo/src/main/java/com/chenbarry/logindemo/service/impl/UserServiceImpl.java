@@ -24,7 +24,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public User login(UserLoginRequest userLoginRequest) {
-        User user = userDao.getUserByEmail(userLoginRequest.getEmail());
+        User user = userDao.getUserByAccount(userLoginRequest.getAccount());
 
         //檢查USER是否存在
         if(user == null){
